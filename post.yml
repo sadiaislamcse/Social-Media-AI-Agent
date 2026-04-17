@@ -1,0 +1,21 @@
+name: FB Auto Post
+
+on:
+  workflow_dispatch:  # শুধু manual run
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - run: pip install groq requests
+      - name: Run FB Agent
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PAGE_ID: ${{ secrets.PAGE_ID }}
+          PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+        run: python main.py
