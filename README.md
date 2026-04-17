@@ -6,7 +6,7 @@
 
 ## 🚀 What It Does
 
-I used to spend hours every week planning content, writing posts, finding images, and scheduling everything manually. So I automated the entire workflow using AI.
+We used to spend hours every week planning content, writing posts, finding images, and scheduling everything manually. So I automated the entire workflow using AI.
 
 **Now the system works like this:**
 
